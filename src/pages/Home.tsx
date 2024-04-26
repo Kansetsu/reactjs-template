@@ -1,18 +1,17 @@
-import { Container } from "@radix-ui/themes";
-import { RedirectButton } from "./Home.styles";
-import { useNavigate } from "react-router-dom";
+import { RedirectButton, ContentContainer } from './Home.styles';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
   const navigate = useNavigate();
   const handleOnClick = () => {
-    navigate("/test-page");
+    navigate('/test-page');
   };
 
   return (
-    <Container>
+    <ContentContainer minHeight={'100vh'}>
       <RedirectButton onClick={handleOnClick}>
         Click-me to Redirect
       </RedirectButton>
-    </Container>
+    </ContentContainer>
   );
 };
